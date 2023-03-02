@@ -3,6 +3,7 @@
 [![PyPI version](https://badge.fury.io/py/time-weighted-average-for-water.svg)](https://badge.fury.io/py/time-weighted-average-for-water)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/time-weighted-average-for-water)
 [![Downloads](https://pepy.tech/badge/time-weighted-average-for-water)](https://pepy.tech/project/time-weighted-average-for-water)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7691849.svg)](https://doi.org/10.5281/zenodo.7691849)
 
 It is a tool to calculate time weighted average for gauged water level, flow, or something similar.
 
@@ -14,6 +15,7 @@ It is a tool to calculate time weighted average for gauged water level, flow, or
 - [Usage](#usage)
 - [How to cite?](#how-to-cite)
 - [Changelog](#changelog)
+- [Todo](#todo)
 
 ## Installation, update and uninstallation
 
@@ -54,7 +56,8 @@ data = pd.read_csv(url_demodata)
 data['time'] = pd.to_datetime(data['time'])
 
 # usages
-results1 = dailyAverage(data, itemHeader=['Z', 'Q'], timeHeader='time')
+items = ['Z', 'Q']
+results1 = dailyAverage(data, itemHeader=items, timeHeader='time')
 results2 = dailyAverage(data, itemHeader=['Z'], timeHeader='time')
 results3 = dailyAverage(data, itemHeader='Q', timeHeader='time')
 
@@ -73,8 +76,11 @@ else:
 If this tool is useful to your research, 
 <a class="github-button" href="https://github.com/longavailable/time-weighted-average-for-water" aria-label="Star longavailable/time-weighted-average-for-water on GitHub">star</a> and cite it as below:
 ```
-Xiaolong Liu. (2023, March 02). longavailable/time-weighted-average-for-water. Zenodo. 
+Xiaolong Liu. (2023, March 02). longavailable/time-weighted-average-for-water. Zenodo.
+https://doi.org/10.5281/zenodo.7691849
 ```
+Easily, you can import it to 
+<a href="https://www.mendeley.com/import/?url=https://zenodo.org/record/7691849"><i class="fa fa-external-link"></i> Mendeley</a>.
 
 ## Changelog
 
@@ -86,3 +92,6 @@ Xiaolong Liu. (2023, March 02). longavailable/time-weighted-average-for-water. Z
 [twaw/twaw.py]: https://github.com/longavailable/time-weighted-average-for-water/blob/main/twaw/twaw.py
 [tests/001-daily-average.py]: https://github.com/longavailable/time-weighted-average-for-water/blob/main/tests/001-daily-average.py
 
+## Todo
+
+- Add a method description.
